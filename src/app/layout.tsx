@@ -1,9 +1,8 @@
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/theme-toggle";
-import Header from "@/components/Header";
 
 const myFont = localFont({
   src: "../public/fonts/Roboto-Regular.ttf",
