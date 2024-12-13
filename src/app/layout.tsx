@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const myFont = localFont({
   src: "../public/fonts/Roboto-Regular.ttf",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="no-scrollbar ">
-      <body className={`${myFont.className} antialiased`}>
+      <body className={`${myFont.className} antialiased h-screen w-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
