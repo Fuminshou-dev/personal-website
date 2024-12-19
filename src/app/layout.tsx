@@ -2,7 +2,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
 
 const myFont = localFont({
   src: "../public/fonts/Roboto-Regular.ttf",
@@ -27,7 +26,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Header />
           {children}
         </ThemeProvider>
       </body>
