@@ -27,4 +27,4 @@ jobs:
             pnpm run build
             pm2 reload personal-website
             cd src/
-            node index.js
+            pm2 start index.js --name personal-website-server
