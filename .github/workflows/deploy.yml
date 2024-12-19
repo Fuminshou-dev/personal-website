@@ -26,3 +26,5 @@ jobs:
             pnpm install --frozen-lockfile
             pnpm run build
             pm2 reload personal-website
+            cd src/
+            node index.js
