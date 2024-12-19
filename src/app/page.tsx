@@ -8,13 +8,9 @@ export default function Home() {
 
   const handleButtonClick = async () => {
     try {
-      await fetch("https://api.tracker.yandex.net/v2/issues/", {
+      const response = await fetch("/api/issues", {
         method: "POST",
         headers: {
-          Accept: "application/json",
-          "X-Cloud-Org-ID": "bpf4so6pdorpcp1lke3v",
-          Authorization:
-            "OAuth y0_AgAAAAAMh0ccAAz8bQAAAAEc4BObAADQYl_YNNZBq5SW6biMXYzNKgchRA",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -22,6 +18,10 @@ export default function Home() {
           queue: "TESTPOSTMAN",
         }),
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       setSuccess(true);
     } catch (error) {
       console.error("Error fetching data:", error);
